@@ -34,3 +34,36 @@ body {
 #submitNewThread {
   margin: 50px;
 }
+
+#title {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  color: #34105e;
+  text-shadow: 4px 3px 0px #7A7A7A;
+}
+
+#body {
+  background: radial-gradient(ellipse at center, #CFD6FF 0%, #C2D9FF 50%, #C7D5FF 100%);
+}
+
+.box1title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.box1form {
+  margin: auto;
+  width: 400px;
+}
+
+.box1btn {
+  width: 100px;
+  margin-left: 150px;
+}

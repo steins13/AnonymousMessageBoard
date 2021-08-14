@@ -8,65 +8,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./public/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   </head>
-  <body>
-    <header>
+  <body class="container" id="body">
+    <header id="title">
       <h1>
         ISQA_3 - Anon Message Board
       </h1>
     </header>
-    <div id='testui' style='margin-left: 5%'>
-      <h2 style="text-align: left">API Tests:</h2>
-        <h4>New thread (POST /api/threads/:board)</h4>
-        <form action="/api/threads/test" method="post" id="newThread">
-          <input type='text' placeholder='board' id='board1' name='board' required=''><br>
-          <textarea type='text' placeholder='Thread text...' name='text' required=''></textarea><br>
-          <input type='text' placeholder='password to delete' name='delete_password' required=''><br>
-          <input type="submit" value="Submit">
-        </form>
-        <hr>
-        <h4>Report thread (PUT /api/threads/:board)</h4>
-        <form id="reportThread">
-          <input type='text' placeholder='board' id='board2' name='board' required=''><br>
-          <input type='text' placeholder='id to report' name='thread_id' required=''><br>
-          <input type="submit" value="Submit">
-        </form>
-        <hr>
-        <h4>Delete thread (DELETE /api/threads/:board)</h4>
-        <form id="deleteThread">
-          <input type='text' placeholder='board' id='board3' name='board' required=''><br>
-          <input type='text' placeholder='id to delete' name='thread_id' required=''><br>
-          <input type='text' placeholder='password' name='delete_password' required=''><br>
-          <input type="submit" value="Submit">
-        </form>
-        <hr>
-        
-        
-        <h4>New reply (POST /api/replies/:board)</h4>
-        <form action="/api/threads/test" method="post" id="newReply">
-          <input type='text' placeholder='board' id='board4' name='board' required=''><br>
-          <input type='text' placeholder='thread id' name='thread_id' required=''><br>
-          <textarea type='text' placeholder='Thread text...' name='text' required=''></textarea><br>
-          <input type='text' placeholder='password to delete' name='delete_password' required=''><br>
-          <input type="submit" value="Submit">
-        </form>
-        <hr>
-        <h4>Report reply (PUT /api/replies/:board)</h4>
-        <form id="reportReply">
-          <input type='text' placeholder='board' id='board5' name='board' required=''><br>
-          <input type='text' placeholder='thread id' name='thread_id' required=''><br>
-          <input type='text' placeholder='id to report' name='reply_id' required=''><br>
-          <input type="submit" value="Submit">
-        </form>
-        <hr>
-        <h4>Delete reply (DELETE /api/replies/:board)</h4>
-        <form id="deleteReply">
-          <input type='text' placeholder='board' id='board6' name='board' required=''><br>
-          <input type='text' placeholder='thread id' name='thread_id' required=''><br>
-          <input type='text' placeholder='id to delete' name='reply_id' required=''><br>
-          <input type='text' placeholder='password' name='delete_password' required=''><br>
-          <input type="submit" value="Submit">
-        </form>        
+    <div id='testui' style='margin-left: 5%' class="row">
+      <div class="col-xl-6 col-12 row">
+        <div class="col-12 box1">
+          <h4 class="box1title">New thread (POST /api/threads/:board)</h4>
+          <form action="/api/threads/test" method="post" id="newThread" class="box1form form-group">
+            <input type='text' placeholder='board' id='board1' name='board' required='' class="form-control"><br>
+            <textarea type='text' placeholder='Thread text...' name='text' required='' class="form-control"></textarea><br>
+            <input type='text' placeholder='password to delete' name='delete_password' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-primary box1btn">
+          </form>
+        </div>
+        <div class="col-12 box1">
+          <h4 class="box1title">Report thread (PUT /api/threads/:board)</h4>
+          <form id="reportThread" class="box1form form-group">
+            <input type='text' placeholder='board' id='board2' name='board' required='' class="form-control"><br>
+            <input type='text' placeholder='id to report' name='thread_id' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-warning box1btn">
+          </form>
+        </div>
+        <div class="col-12 box1">
+          <h4 class="box1title">Delete thread (DELETE /api/threads/:board)</h4>
+          <form id="deleteThread" class="box1form form-group">
+            <input type='text' placeholder='board' id='board3' name='board' required='' class="form-control"><br>
+            <input type='text' placeholder='id to delete' name='thread_id' required='' class="form-control"><br>
+            <input type='text' placeholder='password' name='delete_password' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-danger box1btn">
+          </form>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-12 row">
+        <div class="col-12 box1">
+          <h4 class="box1title">New reply (POST /api/replies/:board)</h4>
+          <form action="/api/threads/test" method="post" id="newReply" class="box1form form-group">
+            <input type='text' placeholder='board' id='board4' name='board' required='' class="form-control"><br>
+            <input type='text' placeholder='thread id' name='thread_id' required='' class="form-control"><br>
+            <textarea type='text' placeholder='Thread text...' name='text' required='' class="form-control"></textarea><br>
+            <input type='text' placeholder='password to delete' name='delete_password' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-primary box1btn">
+          </form>
+        </div>
+        <div class="col-12 box1">
+          <h4 class="box1title">Report reply (PUT /api/replies/:board)</h4>
+          <form id="reportReply" class="box1form form-group">
+            <input type='text' placeholder='board' id='board5' name='board' required='' class="form-control"><br>
+            <input type='text' placeholder='thread id' name='thread_id' required='' class="form-control"><br>
+            <input type='text' placeholder='id to report' name='reply_id' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-warning box1btn">
+          </form>
+        </div>
+        <div class="col-12 box1">
+          <h4 class="box1title">Delete reply (DELETE /api/replies/:board)</h4>
+          <form id="deleteReply" class="box1form form-group">
+            <input type='text' placeholder='board' id='board6' name='board' required='' class="form-control"><br>
+            <input type='text' placeholder='thread id' name='thread_id' required='' class="form-control"><br>
+            <input type='text' placeholder='id to delete' name='reply_id' required='' class="form-control"><br>
+            <input type='text' placeholder='password' name='delete_password' required='' class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-danger box1btn">
+          </form>        
+        </div>
+      </div>  
     </div>
     <hr style='margin: 50px; margin-top: 200px'>
     <!-- Your web-app is https, so your scripts need to be too -->
@@ -137,5 +147,6 @@
         });
       });
    </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>
