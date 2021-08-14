@@ -35,7 +35,7 @@ module.exports = function (app) {
       //save new Thread
       let dateCreate = new Date()
       const newThread = new Thread({
-        board: req.body.board,
+        board: req.params.board,
         text: req.body.text,
         created_on: dateCreate,
         bumped_on: dateCreate,
@@ -44,6 +44,7 @@ module.exports = function (app) {
         replies: []
       })
       newThread.save()
+      return res.json(newThread)
     })
     .get((req, res) => {
        //get 10 threads 3 reply per thread
@@ -95,6 +96,7 @@ module.exports = function (app) {
           if (err) {
             return console.log(err)
           }
+          return res.json(doc)
         })
       })
     })
